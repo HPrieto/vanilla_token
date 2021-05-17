@@ -1,0 +1,37 @@
+{
+  "name": "vanilla_token",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "contracts": "contracts",
+    "migrations": "migrations",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Compiling Smart Contract\"",
+    "clean": "rm -Rf ./build",
+    "compile": "truffle compile",
+    "console": "truffle console",
+    "flatten": "mkdir -p build && truffle-flattener contracts/**/*.sol >> build/bundle.sol",
+    "lint": "eslint './**/*.js?(x)'",
+    "migrate": "truffle migrate",
+    "networks": "truffle networks",
+    "postpublish": "npm run clean",
+    "prepublish": "npm run compile",
+    "test": "npm run clean && truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HPrieto/vanilla_token.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HPrieto/vanilla_token/issues"
+  },
+  "homepage": "https://github.com/HPrieto/vanilla_token#readme",
+  "dependencies": {
+    "web3": "^0.16.0"
+  }
+}
